@@ -483,7 +483,7 @@ def run_repertoire_qc(logfile, unfilt_file):
           --clonotype_metrics "%(clonotype_definition)s"
           """
     cmd += " > %(logfile)s"
-    job_kwargs["job_threads"] = PARAMS['resources_threads_low']
+    job_kwargs["job_threads"] = PARAMS['resources_threads_high']
     P.run(cmd, **job_kwargs)
 
 # -----------------------------------------------------------------------------------------------
